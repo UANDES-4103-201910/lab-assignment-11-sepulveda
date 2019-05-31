@@ -1,28 +1,50 @@
-<h1>Welcome to TicketTopia</h1>
+<div class="container">
+  <div class="row">
+    <div class="col"></div>
 
-<p>Tickets for the following events are currently available:</p>
+      <div class="col-30">
+        <h1>Welcome to TicketTopia</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Nombre</th>
-      <th>Descripción</th>
-      <th>Lugar</th>
-      <th>Fecha</th>
-    </tr>
-  </thead>
+        <p>Tickets for the following events are currently available:</p>
 
-  <tbody>
-  <% @events.each do |event| %>
-    <tr>
-      <td><%= link_to event.name, event %></td>
-      <td><%=event.description%></td>
-      <td><%=event.event_venue.name%></td>
-      <td><%=event.start_date.in_time_zone()%></td>
-    </tr>
-  <% end %>
-  </tbody>
-</table>
+    <div class="row">
+      <div class="col">
+        <p>Nombre</p>
+      </div>
+      <div class="col">
+        <p>Descripción</p>
+      </div>
+      <div class="col">
+        <p>Lugar</p>
+      </div>
+      <div class="col">
+        <p>Fecha</p>
+      </div>
+    </div>
+    <div class="row">
+      <% @events.each do |event| %>
+      <div class="col">
+        <p><%= link_to event.name, event %></p>
+      </div>
+      <div class="col">
+        <p><%=event.description%></p>
+      </div>
+      <div class="col">
+        <p><%=event.event_venue.name%></p>
+      </div>
+      <div class="col">
+        <p><%=event.start_date.in_time_zone()%></p>
+      </div>
+      <% end %>
+    </div>
+
+
+      </div>
+      <div class="col"></div>
+
+  </div>
+</div>
+
 
 <br>
 

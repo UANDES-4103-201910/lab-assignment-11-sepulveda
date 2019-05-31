@@ -4,21 +4,33 @@
     <title>Solution</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <header>
-      <ul class="hmenu">
+  <div class="bcontainer">
+    <div class="row">
+      <div class="col-lg-4">
         <%= link_to('Home', :root) %>
+      </div>
+      <div class="col-lg-4">
         <%= render 'devise/menu/registration_items' %>
+      </div>
+       <div class="col-lg-4">
         <%= render 'devise/menu/login_items' %>
+       </div>
+       <div class="col-lg-4">
         <%= render 'shopping_carts/shopping_cart' %>
-      </ul>
+       </div>
+    </div>
+    <div class="row">
+
+    </div>
+  </div>
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
-    </header>
+
     <%= yield %>
+
   </body>
 </html>
